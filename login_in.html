@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Quản Lý Tài Chính </title>
+    <link rel="icon" href="./th-removebg-preview.png">
+
+    <style>
+    
+
+
+body{
+  
+    justify-content: center;
+    align-items: center;
+    background: url('./anh-nen-giang-sinh-noel-y-nghia_091724032.jpg') no-repeat;
+    background-size: cover;
+    
+}
+.wrapper{
+
+width: 400px;
+height: 440px;
+background: transparent;
+border: 2px solid rgba(215, 69, 69, 0.5);
+border-radius: 20px;
+backdrop-filter: blur(20px);
+box-shadow: 0 0 30px rgba(0,0,0,.5);
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 50%;
+left: 50%;   
+transform: translate(-50%, -50%);
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2{
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:black;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .ic{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+
+}
+.remeber-fogot{
+    font-size: .9em;
+    color:black;
+    font-weight: 500;
+    margin: 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remeber-fogot label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+.remeber-fogot a{
+    color: black;
+    text-decoration: none;
+}
+.remeber-fogot a:hover{
+    text-decoration: underline;
+}
+.bt{
+    width: 100%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width: 100%; 
+    float: left;
+    height: 70px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+.logo{
+    color: azure;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+.menu{
+   
+    height: 70px;
+}
+ul{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color:#26a3cd;
+}
+#snowfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+}
+
+.snowflake {
+    position: absolute;
+    font-size: 20px;
+    color: #c7dde6;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateY(100vh);
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+    .navbar, .menu {
+        width: 100%;
+    }
+    .logo {
+        font-size: 28px; 
+    }
+    ul li {
+        font-size: 16px; 
+    }
+}
+  
+
+@media (max-width: 480px) {
+    .wrapper {
+        height: auto; 
+        padding-bottom: 20px; 
+    }
+    .input-box {
+        margin: 20px 0; 
+    }
+    .input-box label, .input-box input, .remeber-fogot, .bt {
+        font-size: 0.9em; 
+    }
+    .logo {
+        font-size: 20px; 
+    }
+    ul {
+        flex-direction: column; 
+        padding: 0; 
+    }
+    ul li {
+        font-size: 14px; /
+        margin-left: 0; 
+        margin-top: 10px; 
+    }
+    .menu {
+        height: auto; 
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="snowfall-container"></div>
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Đăng Nhập</h2>
+            <div class="menu">
+                <ul>
+                    <li><a href="./Trangchu.html">Trang Chủ</a> </li>
+                    <li><a href="./login_in.html">Đăng Nhập</a></li>
+                    <li><a href="./Gt.html">Giới Thiệu</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="./tinh_toan.html">Tính Toán Chi Tiêu</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+    <br>
+  
+       <div class="wrapper">
+        <div class="form-box login">
+            <h2>Đăng nhập</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="ic"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="ic"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+
+                </div>
+                <div class="remeber-fogot">
+                    <label><input type="checkbox">Nhớ Mật Khẩu</label>
+                    <a href="#">Quên Mật Khẩu ?</a>
+                </div>
+                <button type="submit" class="bt">Đăng Nhập</button>
+                <div class="login-register">
+                    <P>Không có Account ?<a href="#" class="register-link">Đăng Ký </a></P>
+
+                </div>
+
+            </form>
+        </div>
+ 
+        
+   
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+           createSnowflakes();
+       });
+   
+       function createSnowflakes() {
+           const numSnowflakes = 30; // Adjust the number of snowflakes as needed
+           const snowfallContainer = document.getElementById('snowfall-container');
+   
+           for (let i = 0; i < numSnowflakes; i++) {
+               const snowflake = document.createElement('div');
+               snowflake.className = 'snowflake';
+               snowflake.style.left = Math.random() * 100 + 'vw';
+               snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Adjust animation duration
+               snowflake.style.opacity = Math.random();
+               snowflake.innerHTML = '❄'; // You can use an image or other Unicode characters for snowflake
+   
+               snowfallContainer.appendChild(snowflake);
+           }
+       }
+       </script>
+
+ 
+    <script script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script> 
+    <script script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
+</body>
+</html>
